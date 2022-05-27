@@ -3,3 +3,11 @@
     <li class="list-group-item"><%= list.name %></li>
   <% end %>
 </ul>
+
+ <li class="list-group-item">
+      <%= list.name %>
+      <%= link_to "Remove",
+                  bookmark_path(list),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+    </li>
